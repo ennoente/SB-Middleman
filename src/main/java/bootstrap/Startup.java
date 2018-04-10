@@ -4,10 +4,11 @@ import java.io.File;
 
 /**
  * Main startup/boot class.
- * Main goal is to setup the environment and all connections:
- *      1. Setting up the Logger
+ *
+ * The main goal is to setup the environment and all connections, which involves:
+ *      1. Setting up the Logger (TODO 10.04.2018)
  *      2. Setting up all directories
- *      3. Reading from config.properties
+ *      3. Reading from config.properties (creating a default one, if it not already exists)
  *      4. JDBC connection
  *      5. Starting the networking Thread
  *      6. Starting the corpse collector Thread
@@ -25,9 +26,6 @@ public class Startup {
      */
     private static void setupServerDirectories() {
         final File SERVER_ROOT_DIR = new File("/srv/SB Middleman/");
-        final File LOGGING_DIR = new File("/var/log/SB Middleman");
-
-        
-
+        System.out.println("Created /srv/SB Middleman/: " + SERVER_ROOT_DIR.mkdirs() + ", directory exists: " + SERVER_ROOT_DIR.exists());
     }
 }
