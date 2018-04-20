@@ -5,8 +5,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * The Server class povides the ServerSocket for clients to
- * connect to this application / service.
+ * The Server class provides the ServerSocket for clients to
+ * connect to this application/service.
  * For every client a new thread handling the connection to said client
  * is started.
  */
